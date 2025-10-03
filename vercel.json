@@ -1,4 +1,10 @@
 {
-  "builds": [{ "src": "api/index.py", "use": "@vercel/python" }],
-  "routes": [{ "src": "/(.*)", "dest": "api/index.py" }]
+  "functions": {
+    "api/main.py": {
+      "runtime": "python3.11"
+    }
+  },
+  "routes": [
+    { "src": "/metrics", "dest": "/api/main.py" }
+  ]
 }
