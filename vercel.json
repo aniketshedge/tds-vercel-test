@@ -5,6 +5,7 @@
     }
   },
   "routes": [
-    { "src": "/metrics", "dest": "/api/main.py" }
+    { "src": "/metrics", "dest": "/api/main.py" },
+    { "src": "/task", "dest": "/api/main.py" }
   ]
 }
