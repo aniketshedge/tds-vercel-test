@@ -1,0 +1,17 @@
+name: Demo Success Workflow
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  succeed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Print success message
+        run: |
+          echo "This workflow ran successfully."
